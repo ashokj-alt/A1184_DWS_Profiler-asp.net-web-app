@@ -1,0 +1,568 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84EBC504-8B16-47BC-85EA-8985EE73C63F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DWS_Profiler</RootNamespace>
+    <AssemblyName>DWS_Profiler</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Graffias\Graffias_SVN_14-08-2020\OutBoundWebApp\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccessDenied.aspx" />
+    <Content Include="assets\images\AdminSVG.svg" />
+    <Content Include="assets\images\announcement.svg" />
+    <Content Include="assets\images\apple-touch-icon.png" />
+    <Content Include="assets\images\barcode-solid.svg" />
+    <Content Include="assets\images\boxes.svg" />
+    <Content Include="assets\images\checkbox-icon.png" />
+    <Content Include="assets\images\DispatchSVG.svg" />
+    <Content Include="assets\images\down.svg" />
+    <Content Include="assets\images\DropFIle.svg" />
+    <Content Include="assets\images\favicon.ico" />
+    <Content Include="assets\images\favicon.png" />
+    <Content Include="assets\images\logo%402x.png" />
+    <Content Include="assets\images\logo-blue%402x.png" />
+    <Content Include="assets\images\logo-blue.png" />
+    <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\logo.svg" />
+    <Content Include="assets\images\logo1.png" />
+    <Content Include="assets\images\Notifications.svg" />
+    <Content Include="assets\images\PastOrdersSVG.svg" />
+    <Content Include="assets\images\PstOrder.png" />
+    <Content Include="assets\images\radio-icon.png" />
+    <Content Include="assets\images\Reports.png" />
+    <Content Include="assets\images\ReportsSVG.svg" />
+    <Content Include="assets\images\Setting.png" />
+    <Content Include="assets\images\tachometer.png" />
+    <Content Include="assets\images\user.png" />
+    <Content Include="assets\images\Users-Exit-icon.png" />
+    <Content Include="assets\images\UsersSVG.svg" />
+    <Content Include="assets\images\volume.svg" />
+    <Content Include="assets\images\weight.svg" />
+    <Content Include="favicon.ico" />
+    <Content Include="global\css\Annunciation.css" />
+    <Content Include="global\css\base.css" />
+    <Content Include="global\css\bootstrap-extend.min.css" />
+    <Content Include="global\css\bootstrap.min.css" />
+    <Content Include="global\css\cyan.css" />
+    <Content Include="global\css\font-awesome2.min.css" />
+    <Content Include="global\css\font-awesome.min.css" />
+    <Content Include="global\css\login-v2.min.css" />
+    <Content Include="global\css\media.css" />
+    <Content Include="global\css\NewDashboard.css" />
+    <Content Include="global\css\site.min.css" />
+    <Content Include="global\css\style.css" />
+    <Content Include="global\css\style1.css" />
+    <Content Include="global\css\stylesheet.css" />
+    <Content Include="global\css\sweetalert.min.css" />
+    <Content Include="global\css\toastr.min.css" />
+    <Content Include="global\fonts\font-awesome\font-awesome.css" />
+    <Content Include="global\fonts\font-awesome\font-awesome.min.css" />
+    <Content Include="global\fonts\font-awesome\font-awesome.svg" />
+    <Content Include="global\fonts\IBM_Fonts\stylesheet.css" />
+    <Content Include="global\css\hero-slider.css" />
+    <Content Include="global\images\add-user_1.png" />
+    <Content Include="global\images\add_user_white.png" />
+    <Content Include="global\images\Armstrong.png" />
+    <Content Include="global\images\arrow_in.svg" />
+    <Content Include="global\images\arrow_out.svg" />
+    <Content Include="global\images\arrow_right.svg" />
+    <Content Include="global\images\back_arrow.svg" />
+    <Content Include="global\images\barcode-solid.svg" />
+    <Content Include="global\images\barcode.svg" />
+    <Content Include="global\images\bell.png" />
+    <Content Include="global\images\boxes.svg" />
+    <Content Include="global\images\chart_pie.svg" />
+    <Content Include="global\images\check.png" />
+    <Content Include="global\images\checkbox-icon.png" />
+    <Content Include="global\images\close.svg" />
+    <Content Include="global\images\dashboard-128.png" />
+    <Content Include="global\images\dashboard-2.png" />
+    <Content Include="global\images\dashboard.svg" />
+    <Content Include="global\images\Dashboard_1.svg" />
+    <Content Include="global\images\dashboard_whit.png" />
+    <Content Include="global\images\dashboard_white.png" />
+    <Content Include="global\images\delete_1.png" />
+    <Content Include="global\images\document-1.png" />
+    <Content Include="global\images\drop_file.png" />
+    <Content Include="global\images\drop_file_white.png" />
+    <Content Include="global\images\edit_1.png" />
+    <Content Include="global\images\exit.svg" />
+    <Content Include="global\images\export.svg" />
+    <Content Include="global\images\Height_1.png" />
+    <Content Include="global\images\Height_11.png" />
+    <Content Include="global\images\import_icon.svg" />
+    <Content Include="global\images\Length_1.png" />
+    <Content Include="global\images\Length_2.png" />
+    <Content Include="global\images\Length_3.png" />
+    <Content Include="global\images\Length_31.png" />
+    <Content Include="global\images\list.png" />
+    <Content Include="global\images\lock.svg" />
+    <Content Include="global\images\logo-login.jpg" />
+    <Content Include="global\images\logo.png" />
+    <Content Include="global\images\logo.svg" />
+    <Content Include="global\images\plus.png" />
+    <Content Include="global\images\radio-icon.png" />
+    <Content Include="global\images\report-2-128.png" />
+    <Content Include="global\images\report-3.png" />
+    <Content Include="global\images\report-4.png" />
+    <Content Include="global\images\report.svg" />
+    <Content Include="global\images\report_1.png" />
+    <Content Include="global\images\report_2.png" />
+    <Content Include="global\images\report_data.svg" />
+    <Content Include="global\images\report_white.png" />
+    <Content Include="global\images\save-24px.svg" />
+    <Content Include="global\images\search_2.png" />
+    <Content Include="global\images\search_black.png" />
+    <Content Include="global\images\settings-5-128.png" />
+    <Content Include="global\images\settings.svg" />
+    <Content Include="global\images\settings_1.png" />
+    <Content Include="global\images\settings_1.svg" />
+    <Content Include="global\images\settings_white.png" />
+    <Content Include="global\images\System_analytics.svg" />
+    <Content Include="global\images\total_count.svg" />
+    <Content Include="global\images\user-3-128.png" />
+    <Content Include="global\images\usergroup.svg" />
+    <Content Include="global\images\user_admin.svg" />
+    <Content Include="global\images\user_management.svg" />
+    <Content Include="global\images\user_profile.png" />
+    <Content Include="global\images\verified_user-24px.svg" />
+    <Content Include="global\images\verified_user.svg" />
+    <Content Include="global\images\volume.svg" />
+    <Content Include="global\images\Volume_3.png" />
+    <Content Include="global\images\Volume_31.png" />
+    <Content Include="global\images\warning.svg" />
+    <Content Include="global\images\weight.svg" />
+    <Content Include="global\css\owl-carousel.css" />
+    <Content Include="global\css\templatemo-style.css" />
+    <Content Include="global\images\Width_1.png" />
+    <Content Include="global\images\Width_11.png" />
+    <Content Include="global\images\x-mark.png" />
+    <Content Include="homepage.aspx" />
+    <Content Include="Images\armstrong-logo.png" />
+    <Content Include="Images\ArmstrongLogo_white.png" />
+    <Content Include="Images\ArmstrongLogo.png" />
+    <Content Include="Images\arrow_right.svg" />
+    <Content Include="Images\auto.png" />
+    <Content Include="Images\awb_icon.png" />
+    <Content Include="Images\barcode.png" />
+    <Content Include="Images\bell_1.gif" />
+    <Content Include="Images\bell.png" />
+    <Content Include="Images\bg_wran.png" />
+    <Content Include="Images\box.png" />
+    <Content Include="Images\cam.png" />
+    <Content Include="Images\cancel.png" />
+    <Content Include="Images\chart_icon.png" />
+    <Content Include="Images\chevron_left.svg" />
+    <Content Include="Images\clock_icon.png" />
+    <Content Include="Images\close %281%29.png" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\close.svg" />
+    <Content Include="Images\close_outline.svg" />
+    <Content Include="Images\close_red.png" />
+    <Content Include="Images\cnt_icon.png" />
+    <Content Include="Images\cust_logo.png" />
+    <Content Include="Images\dashboardscreen1-screenshot.png" />
+    <Content Include="Images\dashboard_icon.png" />
+    <Content Include="Images\delete.svg" />
+    <Content Include="Images\Delivery.jpg" />
+    <Content Include="Images\Delivery1.jpg" />
+    <Content Include="Images\dot_mark.svg" />
+    <Content Include="Images\download.png" />
+    <Content Include="Images\download_black.svg" />
+    <Content Include="Images\export-outline.png" />
+    <Content Include="Images\export.png" />
+    <Content Include="Images\export_white.png" />
+    <Content Include="Images\failed.png" />
+    <Content Include="Images\fault_icon.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\favicon.png" />
+    <Content Include="Images\flipkart_icon.png" />
+    <Content Include="Images\foot_arm_logo.png" />
+    <Content Include="Images\height.png" />
+    <Content Include="Images\help.png" />
+    <Content Include="Images\hmi.png" />
+    <Content Include="Images\info.png" />
+    <Content Include="Images\info_black.png" />
+    <Content Include="Images\info_icon.svg" />
+    <Content Include="Images\length.png" />
+    <Content Include="Images\line_bg.png" />
+    <Content Include="Images\login_bg.png" />
+    <Content Include="Images\logo.jpg" />
+    <Content Include="Images\logout.svg" />
+    <Content Include="Images\logo_Delhivery.png" />
+    <Content Include="Images\loss_icon.png" />
+    <Content Include="Images\manual_icon.png" />
+    <Content Include="Images\mapping.svg" />
+    <Content Include="Images\menu.svg" />
+    <Content Include="Images\negative.svg" />
+    <Content Include="Images\notification.svg" />
+    <Content Include="Images\notification_icon.png" />
+    <Content Include="Images\not_bot_bg.png" />
+    <Content Include="Images\open.gif" />
+    <Content Include="Images\package.png" />
+    <Content Include="Images\ParleAgro_Logo.png" />
+    <Content Include="Images\plc.png" />
+    <Content Include="Images\refresh.png" />
+    <Content Include="Images\right_chevron.svg" />
+    <Content Include="Images\rvol_icon.png" />
+    <Content Include="Images\save.png" />
+    <Content Include="Images\save_as.png" />
+    <Content Include="Images\search.svg" />
+    <Content Include="Images\search_1.png" />
+    <Content Include="Images\search_white.png" />
+    <Content Include="Images\success.png" />
+    <Content Include="Images\sys_bg.png" />
+    <Content Include="Images\time-left.png" />
+    <Content Include="Images\truck_bg.png" />
+    <Content Include="Images\updated.svg" />
+    <Content Include="Images\user.png" />
+    <Content Include="Images\user_icon.svg" />
+    <Content Include="Images\VMS.png" />
+    <Content Include="Images\vol_icon.png" />
+    <Content Include="Images\warning.png" />
+    <Content Include="Images\Wehig_icon.png" />
+    <Content Include="Images\weight.png" />
+    <Content Include="Images\weight1.png" />
+    <Content Include="Images\width.png" />
+    <Content Include="JS\9226cb70eb.js" />
+    <Content Include="JS\angular-chart.min.js" />
+    <Content Include="JS\angular.min.js" />
+    <Content Include="JS\bootstrap.bundle.min.js" />
+    <Content Include="JS\bootstrap.min.js" />
+    <Content Include="JS\Chart.min.js" />
+    <Content Include="JS\custom.js" />
+    <Content Include="JS\dashboard\dashboard.js" />
+    <Content Include="JS\dashboard\materialMaster.js" />
+    <Content Include="JS\dashboard\NewDashboard.js" />
+    <Content Include="JS\Highcharts\accessibility.js" />
+    <Content Include="JS\Highcharts\export-data.js" />
+    <Content Include="JS\Highcharts\exporting.js" />
+    <Content Include="JS\Highcharts\highcharts.js" />
+    <Content Include="JS\jquery-1.12.4.js" />
+    <Content Include="JS\jquery-3.2.1.min.js" />
+    <Content Include="JS\jquery.min.js" />
+    <Content Include="JS\popper.min.js" />
+    <Content Include="JS\RobotAnnunciation\Annunciation.js" />
+    <Content Include="JS\sweetalert.min.js" />
+    <Content Include="JS\tether.js" />
+    <Content Include="JS\toastr.js" />
+    <Content Include="JS\ui-bootstrap-tpls-0.13.4.min.js" />
+    <Content Include="JS\webapp\DataReport.js" />
+    <Content Include="JS\webapp\FaultScreen.js" />
+    <Content Include="JS\webapp\Homepage.js" />
+    <Content Include="JS\webapp\ProductionAnalysis.js" />
+    <Content Include="JS\webapp\ProductionReport.js" />
+    <Content Include="JS\webapp\ReasonWiseReport.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Pages\ErrorPage\Error.aspx" />
+    <Content Include="Pages\faultscreen.aspx" />
+    <Content Include="Pages\materialMaster.aspx" />
+    <Content Include="Pages\Reports\dashboard.aspx" />
+    <Content Include="Pages\Reports\DataReport.aspx" />
+    <Content Include="Pages\Reports\NewDashboard.aspx" />
+    <Content Include="Pages\Reports\ProductionReport.aspx" />
+    <Content Include="Pages\Reports\ProductivityReport.aspx" />
+    <Content Include="Pages\Reports\ReasonwiseReport.aspx" />
+    <Content Include="Pages\Reports\ProductionAnalysis.aspx" />
+    <Content Include="Pages\SearchImage.aspx" />
+    <Content Include="Pages\Setting\BoxCalibrationSetting.aspx" />
+    <Content Include="Pages\Setting\MasterSetting.aspx" />
+    <Content Include="Pages\Training_Doc.aspx" />
+    <Content Include="Pages\user_management.aspx" />
+    <Content Include="MaterialMaster.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccessDenied.aspx.designer.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AMBPL\Common.cs" />
+    <Compile Include="Base.Master.cs">
+      <DependentUpon>Base.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Base.Master.designer.cs">
+      <DependentUpon>Base.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessLayer\Calibration.cs" />
+    <Compile Include="BusinessLayer\clsMain.cs" />
+    <Compile Include="BusinessLayer\Dashboard\dashboard.cs" />
+    <Compile Include="BusinessLayer\materialMaster.cs" />
+    <Compile Include="BusinessLayer\Member.cs" />
+    <Compile Include="BusinessLayer\ProductionReport.cs" />
+    <Compile Include="BusinessLayer\RobotAnnunciation\RobotAnnaunciation.cs" />
+    <Compile Include="BusinessLayer\UserManagement\AccessRights\AccessRights.cs" />
+    <Compile Include="BusinessLayer\UserManagement\AccessRights\Menu.cs" />
+    <Compile Include="BusinessLayer\UserManagement\SSTCryptographer.cs" />
+    <Compile Include="BusinessLayer\UserManagement\User.cs" />
+    <Compile Include="BusinessLayer\UserManagement\UserGroup.cs" />
+    <Compile Include="DataAccessLayer\CommonDataLayer.cs" />
+    <Compile Include="DataAccessLayer\materiaMaster.cs" />
+    <Compile Include="homepage.aspx.cs">
+      <DependentUpon>homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homepage.aspx.designer.cs">
+      <DependentUpon>homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ErrorPage\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ErrorPage\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\faultscreen.aspx.cs">
+      <DependentUpon>faultscreen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\faultscreen.aspx.designer.cs">
+      <DependentUpon>faultscreen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\materialMaster.aspx.cs">
+      <DependentUpon>materialMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\materialMaster.aspx.designer.cs">
+      <DependentUpon>materialMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Reports\dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Reports\dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Reports\DataReport.aspx.cs">
+      <DependentUpon>DataReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Reports\DataReport.aspx.designer.cs">
+      <DependentUpon>DataReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Reports\NewDashboard.aspx.cs">
+      <DependentUpon>NewDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Reports\NewDashboard.aspx.designer.cs">
+      <DependentUpon>NewDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Reports\ProductionReport.aspx.cs">
+      <DependentUpon>ProductionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Reports\ProductionReport.aspx.designer.cs">
+      <DependentUpon>ProductionReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Reports\ProductivityReport.aspx.cs">
+      <DependentUpon>ProductivityReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Reports\ProductivityReport.aspx.designer.cs">
+      <DependentUpon>ProductivityReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Reports\ReasonwiseReport.aspx.cs">
+      <DependentUpon>ReasonwiseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Reports\ReasonwiseReport.aspx.designer.cs">
+      <DependentUpon>ReasonwiseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Reports\ProductionAnalysis.aspx.cs">
+      <DependentUpon>ProductionAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Reports\ProductionAnalysis.aspx.designer.cs">
+      <DependentUpon>ProductionAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SearchImage.aspx.cs">
+      <DependentUpon>SearchImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SearchImage.aspx.designer.cs">
+      <DependentUpon>SearchImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\BoxCalibrationSetting.aspx.cs">
+      <DependentUpon>BoxCalibrationSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\BoxCalibrationSetting.aspx.designer.cs">
+      <DependentUpon>BoxCalibrationSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\MasterSetting.aspx.cs">
+      <DependentUpon>MasterSetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Setting\MasterSetting.aspx.designer.cs">
+      <DependentUpon>MasterSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Training_Doc.aspx.cs">
+      <DependentUpon>Training_Doc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Training_Doc.aspx.designer.cs">
+      <DependentUpon>Training_Doc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\user_management.aspx.cs">
+      <DependentUpon>user_management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\user_management.aspx.designer.cs">
+      <DependentUpon>user_management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MaterialMaster.aspx.cs">
+      <DependentUpon>MaterialMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterialMaster.aspx.designer.cs">
+      <DependentUpon>MaterialMaster.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Base.Master" />
+    <Content Include="global\fonts\font-awesome\font-awesome.eot" />
+    <Content Include="global\fonts\font-awesome\font-awesome.ttf" />
+    <Content Include="global\fonts\font-awesome\font-awesome.woff" />
+    <Content Include="global\fonts\font-awesome\font-awesome.woff2" />
+    <Content Include="global\fonts\IBM_Fonts\ibmplexsans-bold.woff" />
+    <Content Include="global\fonts\IBM_Fonts\ibmplexsans-bolditalic.woff" />
+    <Content Include="global\fonts\IBM_Fonts\ibmplexsans-extralight.woff" />
+    <Content Include="global\fonts\IBM_Fonts\ibmplexsans-extralightitalic.woff" />
+    <Content Include="global\fonts\IBM_Fonts\ibmplexsans-italic.woff" />
+    <Content Include="global\fonts\IBM_Fonts\ibmplexsans-light.woff" />
+    <Content Include="global\fonts\IBM_Fonts\ibmplexsans-medium.woff" />
+    <Content Include="global\fonts\IBM_Fonts\ibmplexsans-mediumitalic.woff" />
+    <Content Include="global\fonts\IBM_Fonts\ibmplexsans-regular.woff" />
+    <Content Include="global\fonts\IBM_Fonts\ibmplexsans-semibold.woff" />
+    <Content Include="global\Doc\DWS_Product_Manual %281%29.docx" />
+    <Content Include="global\Doc\DWS - User Guide.pdf" />
+    <Content Include="global\Doc\DWS_IT_Software_Installation.docx" />
+    <Content Include="Images\debug.log" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64716</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64716/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

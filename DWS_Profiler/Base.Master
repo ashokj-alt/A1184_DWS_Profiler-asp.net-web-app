@@ -1,0 +1,756 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Base.master.cs" Inherits="DWS_Profiler.Base" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<header class="origa-app-header" runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="/global/css/site.min.css" rel="stylesheet" />
+
+    <link href="/global/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/global/fonts/font-awesome/font-awesome.min.css" rel="stylesheet" />
+    <link href="/global/fonts/IBM_Fonts/stylesheet.css" rel="stylesheet" />
+
+    <script src="/JS/tether.js"></script>
+    <script src="/JS/jquery-3.2.1.min.js"></script>
+    <script src="/JS/popper.min.js"></script>
+    <script src="/JS/bootstrap.min.js"></script>
+    <script src="/JS/custom.js"></script>
+    <script src="/JS/toastr.js"></script>
+    <script src="/JS/angular.min.js"></script>
+    <link href="/global/css/toastr.min.css" rel="stylesheet" />
+    <script src="/JS/Highcharts/highcharts.js"></script>
+    <script src="/JS/Highcharts/exporting.js"></script>
+    <script src="/JS/Highcharts/export-data.js"></script>
+    <script src="/JS/Highcharts/accessibility.js"></script>
+    <link href="/global/css/cyan.css" rel="stylesheet" />
+    <link href="/global/css/base.css" rel="stylesheet" />
+    <link href="/global/css/style.css" rel="stylesheet" />
+    <link href="/global/css/media.css" rel="stylesheet" />
+    <link href="/global/css/sweetalert.min.css" rel="stylesheet" />
+    <script src="/JS/sweetalert.min.js"></script>
+    <link rel="shortcut icon" href="/Images/favicon.png">
+    <script src="/JS/9226cb70eb.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .cust_drop_btn .btn {
+            background-color: transparent;
+            padding: 5px;
+            min-width: auto;
+        }
+
+        .cust_drop {
+            border: none;
+            border-radius: calc(.5 * var(--cr-button-height));
+            box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+            font-weight: 400;
+            min-width: 32px;
+        }
+
+        .cust_drop_btn .dropdown-menu.show {
+            display: block;
+            top: -12px !important;
+            left: -20px !important;
+            will-change: transform;
+            width: 200px;
+        }
+
+        .cust_drop_btn {
+            padding: 0px 10px;
+        }
+
+            .cust_drop_btn .logo-img-wrap {
+                height: 30px;
+                width: 30px;
+                margin: 7px auto !important
+            }
+
+            .cust_drop_btn ul li {
+                padding: 7px;
+            }
+
+                .cust_drop_btn ul li a {
+                    cursor: pointer !important;
+                    color: #161616;
+                    padding: 3px 8px !important;
+                }
+
+                    .cust_drop_btn ul li a:hover {
+                        color: #161616 !important;
+                    }
+
+                    .cust_drop_btn ul li a:focus {
+                        color: #161616 !important;
+                    }
+
+        .notification {
+            color: white;
+            text-decoration: none;
+            padding: 15px 14px;
+            position: relative;
+            display: inline-block;
+            border-radius: 2px;
+        }
+
+            .notification:hover {
+            }
+
+            .notification .badge {
+                position: absolute;
+                top: 10px;
+                right: 8px;
+                padding: 3px 6px;
+                border-radius: 50%;
+                background-color: red;
+                color: white;
+            }
+
+        #divMenuList li button i {
+            margin-right: 5px;
+        }
+
+        #help {
+            position: fixed;
+            bottom: 32px;
+            right: 7px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #7dc0ff;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 14px;
+            min-width: 35px;
+        }
+
+            #help:hover {
+                background-color: #555; /* Add a dark-grey background on hover */
+            }
+    </style>
+
+    <section class="head_part" <%--ng-app="myApp" ng-controller="myController_HeartBit" ng-init="StartTimer()"--%>>
+        <div class="origa-app-sidebar-toggle">
+            <div class="corner active corner-toggle top-menu-collapse-btn" id="menubar" ng-click="openMenu()">
+                <div class="bar arrow-top-r"></div>
+                <div class="bar arrow-middle-r"></div>
+                <div class="bar arrow-bottom-r"></div>
+            </div>
+            <a href="../../homepage.aspx" class="cust_grf_logo">
+                <img src="/images/ArmstrongLogo.png" alt="AMBPL Logo" />
+            </a>
+
+        </div>
+        <!-- Navbar Right Menu-->
+        <ul class="origa-app-nav">
+            <li>
+                <div class="delivery_logo">
+                    <img class="center" src="../../Images/logo_Delhivery.png" alt="Delivery Logo" />
+                </div>
+            </li>
+            <li>
+                <a href="../../Pages/faultscreen.aspx" class="notification" ng-click="GetHeartBit()">
+                    <img src="../../Images/bell.png" style="height: 20px;" />
+                    <span class="badge" id="Notification"></span>
+                </a>
+            </li>
+
+            <li class="cust_drop_btn" style="margin-left: 0px;">
+                <div class="dropdown">
+                    <h6 id="UserName1" runat="server" class="site-menubar-user"></h6>
+                    <span class="cust_li" style="display: flex; color: lightcoral; margin-top: 16px;">
+                        <h6 id="UserName" style="margin-left: 3px; font-size: 14px;" runat="server" class="site-menubar-user"></h6>
+                    </span>
+                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                        <img src="/global/images/user_profile.png" class="logo-img-wrap" />
+                        <span class="caret"></span>
+                    </button>
+
+                    <ul class="dropdown-menu cust_drop" style="z-index: 1000">
+
+                        <li class="cust_li">
+                            <a class="" href="" runat="server" onclick="Logout()">
+                                <img src="/global/images/exit.svg" class="img_rot">Log out
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </li>
+
+        </ul>
+
+    </section>
+
+</header>
+<a href="../../Pages/Training_Doc.aspx" class="btn btn-info" id="help">Help</a>
+
+<script>
+
+    function CheckStatus() {
+
+        $.ajax({
+            type: "POST",
+            url: '<%=ResolveUrl("~/Login.aspx/CheckStatus")%>',
+            data: "{ }",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (msg) {
+                var JData = JSON.parse(msg.d);
+                document.getElementById("Valid").innerHTML = JData[0].Valid;
+                document.getElementById("LicNo").innerHTML = JData[0].LicNo;
+                if (JData[0].Status == false) {
+                    document.getElementById("Status").innerHTML = "Expired";
+                    document.getElementById("ver_icon1").style.display = 'none';
+                    document.getElementById("ver_icon2").style.display = 'block';
+                    return;
+                }
+                document.getElementById("Status").innerHTML = "Active";
+                document.getElementById("ver_icon2").style.display = 'none';
+                document.getElementById("ver_icon1").style.display = 'block';
+            }
+        })
+
+    }
+    function Logout() {
+
+        swal({
+            title: "Are you Sure!",
+            text: "Do you want to logout? ",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "OK!",
+            closeOnConfirm: true
+        }, function (isConfirm) {
+            if (!isConfirm) return;
+
+            location.href = "/Login.aspx";
+
+        })
+    }
+    var UserName = [];
+    var UserId = [];
+    var Loader = [];
+    var DID = "";
+    function checkAssignLoader(UserId1) {
+
+        $.ajax({
+            type: "POST",
+            url: "Dispatch.aspx/CheckForAssignDock",
+
+            data: "{ Loader1ID:'" + UserId1 + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (msg) {
+                //msg.d contains the returned JSON
+
+                var JData = JSON.parse(msg.d);
+
+                if (JData.length == 0) {
+                    document.getElementById("divError").style.display = 'none';
+                }
+                else {
+
+                    document.getElementById("divError").style.display = 'block';
+                    return;
+                }
+            }
+        })
+
+    }
+
+
+
+    function AddLoaderStacker() {
+
+        var UserId1 = document.getElementById("txtUserId").value;
+        var Name = document.getElementById("txtName").value;
+        if (UserId1 == "" || Name == "") {
+            swal("Enter Loader/Stacker details");
+            return;
+        }
+        $.ajax({
+            type: "POST",
+            url: "Dispatch.aspx/CheckForAssignDock",
+
+            data: "{ Loader1ID:'" + UserId1 + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (msg) {
+                //msg.d contains the returned JSON
+
+                var JData = JSON.parse(msg.d);
+
+                if (JData.length == 0) {
+
+                    var table = document.getElementById("myTable");
+                    //Get no of rows in the table
+                    var rowCount = table.rows.length;
+
+                    $("#myTable").append("<tr id='tr" + rowCount + "'><td><input id='txtLoaderName" + rowCount + "' disabled='disabled' class='form-control' placeholder='' type='text' value=''/></td><td><input id='txtLoaderId" + rowCount + "' disabled='disabled' class='form-control' placeholder='' type='text' value=''/></td ><td><select id='selLoader" + rowCount + "' disabled='disabled' class='form-control'> <option value='Select'>Select</option > <option value='Loader'>Loader</option ><option value='Stackar'>Stacker</option> </select > </td><td><a href= '' class='delete-row-a' ><i class='fa fa-fw fa-trash-o' onclick='Delete(" + rowCount + ")'></i></a ></td><td><a href='' class=''><i class='fa fa-fw fa-trash-o' onclick='EnableDisableControls(" + rowCount + ", false)'></i></a></td></tr>'");
+                    var UserId1 = document.getElementById("txtUserId").value;
+                    var table = document.getElementById("myTable");
+                    var rowCount = table.rows.length;
+                       /* alert(rowCount)*/;
+
+                    document.getElementById("divError").style.display = 'none';
+                    var Name = document.getElementById("txtName").value;
+                    var UserId1 = document.getElementById("txtUserId").value;
+                    var Loader_Stakr = document.getElementById("selLoader").value;
+                    for (i = 0; i < rowCount; i++) {
+
+                        if (document.getElementById("txtLoaderName" + (i)).value == "")
+                            document.getElementById("txtLoaderName" + (i)).value = Name;
+                        if (document.getElementById("txtLoaderId" + (i)).value == "")
+                            document.getElementById("txtLoaderId" + (i)).value = UserId1;
+                        if (document.getElementById("selLoader" + (i)).value == "Select")
+                            document.getElementById("selLoader" + (i)).value = Loader_Stakr;
+                    }
+                    document.getElementById("txtName").value = "";
+                    document.getElementById("txtUserId").value = "";
+                    //SaveTeam();
+
+                }
+                else {
+                    document.getElementById("divError").style.display = 'block';
+                }
+
+            },
+
+
+            error: function () { }
+        });
+        txtName = "";
+        txtUserId = "";
+    }
+    function SaveTeam() {
+        var obj = new Array();
+        var LoaderName, LoaderId, LoaderType;
+
+        var table = document.getElementById("myTable");
+
+        var rowCount = table.rows.length;
+
+        if (rowCount == 0) {
+            swal("Add Loader/Stacker to the Team");
+            return;
+        }
+
+        for (i = 0; i < rowCount; i++) {
+
+            if (document.getElementById("tr" + (i)).style.display != 'none') {
+                if (document.getElementById("txtLoaderId" + (i)).style.display != 'none')
+                    var LoaderID = document.getElementById("txtLoaderId" + (i)).value;
+
+                if (document.getElementById("txtLoaderName" + (i)).style.display != 'none')
+                    var LoaderName = document.getElementById("txtLoaderName" + (i)).value;
+                if (document.getElementById("selLoader" + (i)).style.display != 'none')
+                    var LoaderType = document.getElementById("selLoader" + (i)).value;
+                obj[i] = { LoaderID: LoaderID, LoaderName: LoaderName, LoaderType: LoaderType };
+            }
+        }
+
+        var JSONData = JSON.stringify(obj);
+
+        $.ajax({
+            type: "POST",
+            url: "Dispatch.aspx/CreateTeam",
+            data: "{ JSONData:'" + JSONData + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (msg) {
+
+                swal("Team Created Successfully..");
+                $('#mdlCreateTeam').modal('hide');
+                $('#myTable1 tbody').empty();
+
+            },
+            error: function () { }
+        });
+    }
+    function ShowandHideModel() {
+
+        SaveTeam();
+    }
+    function ClearData() {
+        UserName = [];
+        UserId = [];
+        Loader = [];
+        $('#mdlCreateTeam').modal('show');
+        document.getElementById("txtName").value = "";
+        document.getElementById("txtUserId").value = "";
+        document.getElementById("selLoader").value = "Loader";
+        for (var i = 0; i < 5; i++) {
+            document.getElementById("txtLoaderName" + (i + 1)).value = ""
+            document.getElementById("txtLoaderId" + (i + 1)).value = ""
+            document.getElementById("selLoader" + (i + 1)).value = "Loader";
+            EnableDisableControls((i + 1), true)
+        }
+    }
+
+    function AssignUser() {
+        var UserId1 = document.getElementById("txtUserId").value;
+        $.ajax({
+
+            type: "POST",
+            url: "Dispatch.aspx/AssignDock",
+
+            data: "{Id:'" + UserId1 + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (msg) {
+                //msg.d contains the returned JSON
+
+                swal("User " + document.getElementById("txtUserId").value + "Assign to current Dock")
+                HideErrorModel();
+            },
+            error: function () { }
+        });
+    }
+    function HideErrorModel() {
+        document.getElementById("divError").style.display = 'none';
+    }
+    function Delete(Id) {
+        var ID = document.getElementById("txtLoaderId" + Id).value;
+
+        $.ajax({
+
+            type: "POST",
+            url: "Dispatch.aspx/DeleteLoaderStacker",
+
+            data: "{ ID:'" + ID + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (msg) {
+
+                document.getElementById("tr" + Id).style.display = 'none';
+                document.getElementById("txtLoaderName" + Id).style.display = 'none';
+                document.getElementById("txtLoaderId" + Id).style.display = 'none';
+                document.getElementById("selLoader" + Id).style.display = 'none';
+
+            }
+        })
+    }
+    function EnableDisableControls(Id, IsEnable) {
+
+        document.getElementById("txtLoaderName" + Id).disabled = IsEnable;
+        document.getElementById("txtLoaderId" + Id).disabled = IsEnable;
+        document.getElementById("selLoader" + Id).disabled = IsEnable;
+    }
+    var pageRights_Add = 0<%=canAdd%>;
+    var pageRights_Edit = 0<%=canEdit%>;
+    var pageRights_Delete = 0<%=canDelete%>;
+    var showAnnunciationFault = true;
+    var showHeartBit = true;
+    function SelectTeam() {
+
+        $('#mdlCreateTeam').modal('show');
+        document.getElementById("txtName").value = "";
+        document.getElementById("txtUserId").value = "";
+        document.getElementById("selLoader").value = "Loader";
+        $('#myTable1 tbody').empty();
+
+        $.ajax({
+
+            type: "POST",
+            url: "Dispatch.aspx/SelectLoaderStacker",
+
+            data: "{}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (msg) {
+
+                var table = document.getElementById("myTable");
+                //Get no of rows in the table
+                var ListAll = JSON.parse(msg.d);
+                var rowCount1 = table.rows.length;
+                if (rowCount1 == 0 || rowCount1 < ListAll.length) {
+                    var rowCount = ListAll.length;
+
+                    for (i = 0; i < rowCount; i++) {
+
+                        $("#myTable").append("<tr id='tr" + i + "'><td><input id='txtLoaderName" + i + "' disabled='disabled' class='form-control' placeholder='' type='text' value=''/></td><td><input id='txtLoaderId" + i + "' disabled='disabled' class='form-control' placeholder='' type='text' value=''/></td ><td><select id='selLoader" + i + "' disabled='disabled' class='form-control'> <option value='Loader'>Loader</option ><option value='Stackar'>Stacker</option> </select > </td><td><a href= '' class='delete-row-a' ><i class='fa fa-fw fa-trash-o' onclick='Delete(" + i + ")'></i></a ></td><td><a href='row-a' class=''> <i class='fa fa-fw fa-trash-o' onclick='EnableDisableControls(" + i + ", false)'></i></a></td></tr>'");
+
+                        if (document.getElementById("tr" + i).style.display == "none") {
+
+                            document.getElementById("txtLoaderName" + i).style.display == "block";
+                            document.getElementById("txtLoaderId" + i).style.display == "block";
+                            document.getElementById("selLoader" + i).style.display == "block";
+
+                        }
+                        document.getElementById("txtLoaderName" + i).value = ListAll[i].LoaderName;
+                        document.getElementById("txtLoaderId" + i).value = ListAll[i].LoaderID;
+                        document.getElementById("selLoader" + i).value = ListAll[i].LoaderType;
+
+
+                    }
+                    HideErrorModel();
+                }
+
+            },
+            error: function () { }
+        });
+    }
+    $(document).ready(function () {
+
+        $(".top-menu-collapse-btn").click(function () {
+            $(".top-action-wrap").show();
+        });
+
+        $(".body_wrap").click(function () {
+            $(".top-action-wrap").hide();
+        });
+    });
+
+    $(".cust_li").click(function () {
+        $(".cust_drop").hide();
+    });
+
+
+</script>
+
+<!-- Navbar-->
+<div class="origa-app-sidebar-overlay" data-toggle="sidebar">
+    <aside class="app origa-sidebar-mini ">
+        <nav class="sidebar-nav">
+            <div class="top-action-wrap st fr_custom">
+                <h5>Menu
+                </h5>
+                <ul class="block menu_icon" id="divMenuList">
+                    <li>
+                        <button type="button" class="btn btn-light1 btn-block btn-text" onclick='setTimeout(function () { window.location = "/Pages/reports/dashboard.aspx" }, 1000)'><span>Dashboard</span></button>
+
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-light1 btn-block btn-text" onclick='setTimeout(function () { window.location = "/Pages/reports/NewDashboard.aspx" }, 1000)'><span>New Dashboard</span></button>
+
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-light1 btn-block btn-text" onclick='setTimeout(function () { window.location = "/Pages/faultscreen.aspx" }, 1000)'><span>System Alerts</span></button>
+
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-light1 btn-block btn-text" onclick='setTimeout(function () { window.location = "/Pages/Reports/ProductionReport.aspx" }, 1000)'><span>Production Report</span></button>
+
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-light1 btn-block btn-text" onclick='setTimeout(function () { window.location = "/Pages/Reports/DataReport.aspx" }, 1000)'><span>DWS Statistics Report</span></button>
+
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-light1 btn-block btn-text" title="Production And System Alerts" onclick='setTimeout(function () { window.location = "/Pages/Reports/ProductionAnalysis.aspx" }, 1000)'><span>Production & System Alerts</span></button>
+
+                    </li>
+
+                    <li>
+                        <button type="button" class="btn btn-light1 btn-block btn-text" onclick='setTimeout(function () { window.location = "/Pages/Setting/BoxCalibrationSetting.aspx" }, 1000)'><span>Box Calibration Setting</span></button>
+
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-light1 btn-block btn-text" onclick='setTimeout(function () { window.location = "/Pages/Setting/MasterSetting.aspx" }, 1000)'><span>Master Setting</span></button>
+
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-light1 btn-block btn-text" onclick='setTimeout(function () { window.location = "/Pages/user_management.aspx" }, 1000)'><span>User management</span></button>
+
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-light1 btn-block btn-text" onclick='setTimeout(function () { window.location = "/Pages/Training_Doc.aspx" }, 1000)'><span>Training Documents</span></button>
+
+                    </li>
+                </ul>
+                <a href="#" class="top-menu-collapse-btn st">Collapse
+                <i class="fa fa-fw fa-chevron-up"></i>
+                </a>
+            </div>
+        </nav>
+    </aside>
+
+    <!--create- -modal-->
+    <div class="modal fade create-team-modal" id="mdlCreateTeam" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="comman-flow-card-outer">
+                    <div class="card comman-flow-card posi-rel">
+                        <div class="card-body">
+                            <div class="row justify-content-center align-items-center comman-flow-card-inner-row">
+                                <div class="col-lg-12">
+                                    <div class="create-team-wrap">
+                                        <div class="create-team-head">
+                                            <h2>
+                                                <i class="fa fa-fw fa-users"></i>
+                                                <span>Create Your Team
+                                                </span>
+                                            </h2>
+                                            <button type="button" class="close close-modal-icon" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="create-team-body">
+                                            <div class="table-responsive">
+                                                <table class="team-table-top">
+                                                    <thead>
+                                                        <tr>
+
+                                                            <th>&nbsp;</th>
+                                                            <th>Name</th>
+                                                            <th>User ID</th>
+                                                            <th>Role</th>
+                                                            <th>&nbsp;</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <span>
+                                                                    <i class="fa fa-fw fa-user" aria-hidden="true"></i>
+                                                                </span>
+                                                            </td>
+                                                            <td data-head="Name" id="">
+                                                                <input id="txtName" class="form-control" placeholder="" type="text" />
+                                                            </td>
+                                                            <td data-head="User ID">
+                                                                <input id="txtUserId" class="form-control" placeholder="" type="text" />
+                                                            </td>
+                                                            <td data-head="Role">
+                                                                <select id="selLoader" class="form-control">
+                                                                    <option value="Loader">Loader</option>
+                                                                    <option value="Stackar">Stacker</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <button id="btnAdd" type="button" onclick="AddLoaderStacker()" class="btn btn-sm btn-success1" title="Add"><i class="fa fa-fw fa-plus"></i>Add</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="team-assign-box clearfix" id="divError" style="display: none">
+                                                <div class="exclamation-wrap">
+                                                    <i class="fa fa-fw fa-exclamation-triangle"></i>
+                                                </div>
+                                                <div>
+                                                    <p>
+                                                        The user you are trying to add is already assigment to Dock 3
+                                                    </p>
+                                                </div>
+                                                <div>
+                                                    <button type="button" class="btn btn-sm btn-light1" onclick="AssignUser()">Assign user to this dock</button>
+                                                </div>
+                                                <div>
+                                                    <button type="button" class="btn btn-sm btn-light1 btn-cancel-adj" onclick="HideErrorModel()">Cancel</button>
+                                                </div>
+                                            </div>
+                                            <div class="table-responsive">
+                                                <table class="team-table-bottom" id="myTable1">
+                                                    <thead>
+                                                        <tr>
+                                                            <%--<th>
+                                                            &nbsp;
+                                                        </th>--%>
+                                                            <th style="padding-left: 20px">Name
+                                                            </th>
+                                                            <th style="padding-left: 5px">User ID
+                                                            </th>
+                                                            <th style="padding-left: 5px">Role
+                                                            </th>
+                                                            <th style="padding-left: 20px">&nbsp;
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="myTable">
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="mt20 creat_btn">
+                                                <button type="button" class="btn btn-sm btn-success1 pull-right xs-create-team-btn" onclick="ShowandHideModel()" title="Create Team">Create Team</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<body class="app origa-sidebar-mini hidden-sidebar-editTeamBtn-body" style="margin-top: 0px; background-color: #eee;" ng-app="myApp">
+    <div class="body_wrap">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <footer class="main-footer">
+            <strong>Copyright © 2020 <a href="">Armstrong Machine Builders Pvt. Ltd</a>.</strong>
+            All rights reserved.
+        </footer>
+    </div>
+</body>
+
+<asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+</asp:ContentPlaceHolder>
+<script type="text/javascript">
+
+    (function () {
+        "use strict";
+        var treeviewMenu = $('.origa-app-menu');
+        // Toggle Sidebar
+        $('[data-toggle="sidebar"]').click(function (event) {
+            event.preventDefault();
+            $('.app').toggleClass('sidenav-toggled');
+        });
+    })();
+    $(document).ready(function () {
+
+        $('.btn-select-truck').click(function () {
+            $(this).toggleClass('active');
+            $('.inner-truck-wrap').slideToggle();
+        });
+
+        $('.inner-truck-wrap .inner-truck-wrap-hidden ul li .btn').click(function () {
+            $(this).toggleClass('btn-primary1');
+        });
+        $('.top-menu-collapse-btn').click(function () {
+            $('.top-action-wrap').toggleClass('active');
+        });
+
+        var divstr = "";
+        var divstr1 = "";
+        var divstr2 = "";
+        var divstr3 = "";
+        var divstr4 = "";
+        var divstr5 = "";
+
+        window.onunload = function () {
+
+            if ((window.event.clientX < 0) || (window.event.clientY < 0)) // close button
+            {
+                OnunloadLogOut();
+            }
+            else if (window.event.altKey == true) // ALT + F4
+            {
+                OnunloadLogOut();
+            }
+            else // for all other unload events
+            {
+                OnunloadLogOut();
+            }
+        }
+    });
+
+</script>
+
+</html>

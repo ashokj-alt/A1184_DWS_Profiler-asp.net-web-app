@@ -1,0 +1,107 @@
+
+@font-face {
+    font-family: 'ibm_plex_sansbold';
+    src: url('ibmplexsans-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ibm_plex_sansbold_italic';
+    src: url('ibmplexsans-bolditalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ibm_plex_sansextralight';
+    src: url('ibmplexsans-extralight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ibm_plex_sansXLtIt';
+    src:url('ibmplexsans-extralightitalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ibm_plex_sansitalic';
+    src:url('ibmplexsans-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ibm_plex_sanslight';
+    src: url('ibmplexsans-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ibm_plex_sansmedium';
+    src: url('ibmplexsans-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ibm_plex_sansmedium_italic';
+    src:url('ibmplexsans-mediumitalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ibm_plex_sansregular';
+    src: url('ibmplexsans-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ibm_plex_sanssemibold';
+    src: url('ibmplexsans-semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

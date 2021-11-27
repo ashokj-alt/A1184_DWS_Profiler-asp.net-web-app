@@ -1,0 +1,227 @@
+﻿
+.report .container {
+    max-width: 100%;
+}
+
+
+
+.main_title {
+    font-size: 28px;
+    width: auto;
+    float: left;
+    margin-bottom: 0;
+}
+
+.top_row {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 6px 0px;
+}
+
+    .top_row .container {
+        margin: 0;
+    }
+
+.exp_btn button {
+    border-radius: 0;
+    padding: 4px 10px;
+}
+
+.exp_btn img {
+    width: 18px;
+    margin-top: -5px;
+    margin-left: 10px;
+}
+
+.inner_content {
+    float: left;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.rad_txt {
+    font-size: 14px;
+    margin-top: -5px;
+    display: grid;
+}
+
+.inner_content .form-control {
+    border-radius: 0;
+    background-color: #ececec;
+    border: none;
+    border-bottom: 1px solid #484747;
+}
+
+.left_side label {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.left_side .form-control {
+    border-radius: 0 !important;
+    background-color: #ececec !important;
+    border: none !important;
+    border-bottom: 1px solid #484747 !important;
+    opacity: 1 !important;
+    position: initial;
+    height: 32px !important;
+}
+
+.left_side .form-group {
+    margin-bottom: 5px;
+}
+
+.left_side select.form-control {
+    height: 32px !important;
+}
+
+.searcg_btn img {
+    width: 19px;
+    margin-left: 10px;
+}
+
+.searcg_btn button {
+    border-radius: 0;
+    padding: 4px 10px;
+}
+
+.exp_btn img {
+    width: 18px;
+    margin-top: -5px;
+    margin-left: 10px;
+}
+
+.report {
+    float: left;
+    width: 100%;
+    min-height: 88vh;
+}
+
+.foot_wrap {
+    float: left;
+    width: 100%;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+.foot_wrap {
+    float: left;
+    width: 100%;
+    text-align: center;
+    background: #f5f5f5;
+    position: fixed;
+    bottom: 0;
+    font-size: 12px;
+    padding: 3px 0px;
+    border-top: 1px solid #ccc;
+}
+
+/*9-1-2021*/
+.main_title img {
+    width: 32px;
+    margin-right: 10px;
+    display: inline;
+    margin-top: -12px;
+}
+
+.fnt_size {
+    font-size: 44px;
+    font-weight: 600;
+}
+
+.inner_cont_wrap {
+    float: left;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.right_txt {
+    float: left;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.left_side_icon {
+    float: left;
+    width: 20%;
+}
+
+
+.time_title {
+    font-size: 28px;
+    margin-bottom: 0;
+    padding: 2px 0;
+    background-color: #244F72;
+    color: #fff;
+}
+
+.cnt {
+    font-size: 30px;
+    font-weight: 600;
+    float: left;
+    width: 100%;
+}
+
+.clock_icon {
+    float: right;
+    width: auto;
+    text-align: left;
+    margin-right: 13px;
+    line-height: 21px;
+}
+
+    .clock_icon img {
+        width: 25px;
+    }
+/*.time_title.bg_2{background-color: #273772;}
+.time_title.bg_3{background-color: #BC9B02;}
+.time_title.bg_4{background-color: #9D1C42;}
+.time_title.bg_5{background-color: #26A348;}
+.time_title.bg_6{background-color: #4B264F;}
+.time_title.bg_7{background-color: #A04FF6;}
+.time_title.bg_8{background-color: #EA1F88;}
+.time_title.bg_9{background-color: #4A171E;}
+.time_title.bg_10{background-color: #244F72;}
+.time_title.bg_11{background-color: #191919;}
+.time_title.bg_12{background-color: #EB4C36;}
+.time_title.bg_13{background-color: #FE0000;}
+.time_title.bg_14{background-color: #44450C;}
+.time_title.bg_15{background-color: #01A1FF;}
+.time_title.bg_16{background-color: #7D02AB;}
+.time_title.bg_17{background-color: #80B908;}
+.time_title.bg_18{background-color: #727473;}
+.time_title.bg_19{background-color: #0208FE;}
+.time_title.bg_20{background-color: #EFAE1C;}
+.time_title.bg_21{background-color: #018EAC;}
+.time_title.bg_22{background-color: #770B1B;}
+.time_title.bg_23{background-color: #17F703;}
+.time_title.bg_24{background-color: #000000;}*/
+
+.com_logo img {
+    max-width: 83%;
+}
+
+.dash_icon img {
+    width: 23px;
+    margin-top: -6px;
+    margin-right: 10px;
+}
+
+.cust_logo img {
+    width: 75%;
+}
+
+@media screen and (max-width: 1370px) and (min-width: 1600px), (min-width: 1920px) {
+
+    .time_title {
+        font-size: 38px;
+    }
+
+    .cnt {
+        font-size: 55px;
+        font-weight: 600;
+    }
+}

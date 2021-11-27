@@ -1,0 +1,70 @@
+19-04-2021 12:11:20 	session expire error >> System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'UserManagement_User_SessionId_Get'.
+   at I145_DWS.DataAccessLayer.CommonDataLayer.ExecuteScalar(SqlCommand cmd) in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\DataAccessLayer\CommonDataLayer.cs:line 108
+   at I145_DWS.BusinessLayer.clsMain.CheckSession() in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\BusinessLayer\clsMain.cs:line 303
+ClientConnectionId:f2e52b33-ac8e-42c0-bfaf-06bdad9a715d
+Error Number:2812,State:62,Class:16
+19-04-2021 12:11:22 	session expire error >> System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'UserManagement_User_SessionId_Get'.
+   at I145_DWS.DataAccessLayer.CommonDataLayer.ExecuteScalar(SqlCommand cmd) in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\DataAccessLayer\CommonDataLayer.cs:line 108
+   at I145_DWS.BusinessLayer.clsMain.CheckSession() in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\BusinessLayer\clsMain.cs:line 303
+ClientConnectionId:f2e52b33-ac8e-42c0-bfaf-06bdad9a715d
+Error Number:2812,State:62,Class:16
+19-04-2021 12:12:20 	session expire error >> System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'UserManagement_User_SessionId_Get'.
+   at I145_DWS.DataAccessLayer.CommonDataLayer.ExecuteScalar(SqlCommand cmd) in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\DataAccessLayer\CommonDataLayer.cs:line 108
+   at I145_DWS.BusinessLayer.clsMain.CheckSession() in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\BusinessLayer\clsMain.cs:line 303
+ClientConnectionId:6f4d49ea-ce07-4a18-9cae-50f5047c0dc7
+Error Number:2812,State:62,Class:16
+19-04-2021 12:12:25 	session expire error >> System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'UserManagement_User_SessionId_Get'.
+   at I145_DWS.DataAccessLayer.CommonDataLayer.ExecuteScalar(SqlCommand cmd) in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\DataAccessLayer\CommonDataLayer.cs:line 108
+   at I145_DWS.BusinessLayer.clsMain.CheckSession() in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\BusinessLayer\clsMain.cs:line 303
+ClientConnectionId:6f4d49ea-ce07-4a18-9cae-50f5047c0dc7
+Error Number:2812,State:62,Class:16
+19-04-2021 12:13:03 	session expire error >> System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'UserManagement_User_SessionId_Get'.
+   at I145_DWS.DataAccessLayer.CommonDataLayer.ExecuteScalar(SqlCommand cmd) in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\DataAccessLayer\CommonDataLayer.cs:line 108
+   at I145_DWS.BusinessLayer.clsMain.CheckSession() in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\BusinessLayer\clsMain.cs:line 303
+ClientConnectionId:6f4d49ea-ce07-4a18-9cae-50f5047c0dc7
+Error Number:2812,State:62,Class:16
+19-04-2021 12:13:04 	session expire error >> System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'UserManagement_User_SessionId_Get'.
+   at I145_DWS.DataAccessLayer.CommonDataLayer.ExecuteScalar(SqlCommand cmd) in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\DataAccessLayer\CommonDataLayer.cs:line 108
+   at I145_DWS.BusinessLayer.clsMain.CheckSession() in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\BusinessLayer\clsMain.cs:line 303
+ClientConnectionId:6f4d49ea-ce07-4a18-9cae-50f5047c0dc7
+Error Number:2812,State:62,Class:16
+19-04-2021 12:13:04 	session expire error >> System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'UserManagement_User_SessionId_Get'.
+   at I145_DWS.DataAccessLayer.CommonDataLayer.ExecuteScalar(SqlCommand cmd) in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\DataAccessLayer\CommonDataLayer.cs:line 108
+   at I145_DWS.BusinessLayer.clsMain.CheckSession() in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\BusinessLayer\clsMain.cs:line 303
+ClientConnectionId:6f4d49ea-ce07-4a18-9cae-50f5047c0dc7
+Error Number:2812,State:62,Class:16
+19-04-2021 12:13:23 	session expire error >> System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'UserManagement_User_SessionId_Get'.
+   at I145_DWS.DataAccessLayer.CommonDataLayer.ExecuteScalar(SqlCommand cmd) in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\DataAccessLayer\CommonDataLayer.cs:line 108
+   at I145_DWS.BusinessLayer.clsMain.CheckSession() in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\BusinessLayer\clsMain.cs:line 303
+ClientConnectionId:6f4d49ea-ce07-4a18-9cae-50f5047c0dc7
+Error Number:2812,State:62,Class:16
+19-04-2021 12:14:05 	session expire error >> System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'UserManagement_User_SessionId_Get'.
+   at I145_DWS.DataAccessLayer.CommonDataLayer.ExecuteScalar(SqlCommand cmd) in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\DataAccessLayer\CommonDataLayer.cs:line 108
+   at I145_DWS.BusinessLayer.clsMain.CheckSession() in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\BusinessLayer\clsMain.cs:line 303
+ClientConnectionId:6f4d49ea-ce07-4a18-9cae-50f5047c0dc7
+Error Number:2812,State:62,Class:16
+19-04-2021 12:15:45 	session expire error >> System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'UserManagement_User_SessionId_Get'.
+   at I145_DWS.DataAccessLayer.CommonDataLayer.ExecuteScalar(SqlCommand cmd) in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\DataAccessLayer\CommonDataLayer.cs:line 108
+   at I145_DWS.BusinessLayer.clsMain.CheckSession() in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\BusinessLayer\clsMain.cs:line 303
+ClientConnectionId:0b8d6e47-7c72-4b0f-a1b5-4777a8a95b17
+Error Number:2812,State:62,Class:16
+19-04-2021 13:58:42 	session expire error >> System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'UserManagement_User_SessionId_Get'.
+   at I145_DWS.DataAccessLayer.CommonDataLayer.ExecuteScalar(SqlCommand cmd) in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\DataAccessLayer\CommonDataLayer.cs:line 108
+   at I145_DWS.BusinessLayer.clsMain.CheckSession() in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\BusinessLayer\clsMain.cs:line 303
+ClientConnectionId:4c13a771-a4f5-4ee7-8070-d622a177a0e3
+Error Number:2812,State:62,Class:16
+19-04-2021 13:58:43 	session expire error >> System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'UserManagement_User_SessionId_Get'.
+   at I145_DWS.DataAccessLayer.CommonDataLayer.ExecuteScalar(SqlCommand cmd) in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\DataAccessLayer\CommonDataLayer.cs:line 108
+   at I145_DWS.BusinessLayer.clsMain.CheckSession() in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\BusinessLayer\clsMain.cs:line 303
+ClientConnectionId:4c13a771-a4f5-4ee7-8070-d622a177a0e3
+Error Number:2812,State:62,Class:16
+19-04-2021 13:58:44 	session expire error >> System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'UserManagement_User_SessionId_Get'.
+   at I145_DWS.DataAccessLayer.CommonDataLayer.ExecuteScalar(SqlCommand cmd) in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\DataAccessLayer\CommonDataLayer.cs:line 108
+   at I145_DWS.BusinessLayer.clsMain.CheckSession() in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\BusinessLayer\clsMain.cs:line 303
+ClientConnectionId:4c13a771-a4f5-4ee7-8070-d622a177a0e3
+Error Number:2812,State:62,Class:16
+19-04-2021 13:58:44 	session expire error >> System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'UserManagement_User_SessionId_Get'.
+   at I145_DWS.DataAccessLayer.CommonDataLayer.ExecuteScalar(SqlCommand cmd) in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\DataAccessLayer\CommonDataLayer.cs:line 108
+   at I145_DWS.BusinessLayer.clsMain.CheckSession() in D:\Ashok\Projects\2021_Project\I145_DWS\Source Code\I145_DWS\A1107_ParlePatalganga\BusinessLayer\clsMain.cs:line 303
+ClientConnectionId:4c13a771-a4f5-4ee7-8070-d622a177a0e3
+Error Number:2812,State:62,Class:16
